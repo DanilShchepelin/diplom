@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    <div class="lesson"style="margin-top: 50px">
+        {% if lesson.published_date %}
+            <div class="date">
+                {{ lesson.published_date }}
+            </div>
+        {% endif %}
+        <h1>{{ lesson.title }}</h1>
+        <p class="lesson__text">{{ lesson.info|linebreaksbr }}</p>
+        <div class="" style="margin-bottom: 25px">
+          <img class="lesson__logo" src="{{ lesson.image.url }}" alt="">
+        </div>
+    </div>
+{% endblock %}
